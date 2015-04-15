@@ -1,4 +1,4 @@
 require 'helper'
 
-describe OmniAuth::Strategies::Exactnl do
+describe OmniAuth::Strategies::Exact do
 end
