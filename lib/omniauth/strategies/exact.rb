@@ -3,7 +3,6 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class Exact < OmniAuth::Strategies::OAuth2
-      option :name, 'Exact'
       option :client_options, {
         site: 'https://start.exactonline.nl',
         authorize_url: 'https://start.exactonline.nl/api/oauth2/auth',
