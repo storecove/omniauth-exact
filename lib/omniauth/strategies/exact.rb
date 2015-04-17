@@ -14,12 +14,12 @@ module OmniAuth
         super
       end
 
-      uid{ raw_info['id'] }
+      uid{ raw_info['feed']['entry']['content']['properties']['UserID']['__content__'] }
 
       info do
         {
-          name: raw_info['name'],
-          email: raw_info['email']
+          name: raw_info['feed']['entry']['content']['properties']['FullName'],
+          email: raw_info['feed']['entry']['content']['properties']['Email']
         }
       end
 
@@ -30,7 +30,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/me').parsed
+        @raw_info ||= access_token.get('/api/v1/current/Me').parsed
       end
     end
   end
