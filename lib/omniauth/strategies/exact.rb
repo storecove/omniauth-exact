@@ -18,7 +18,8 @@ module OmniAuth
       info do
         {
           name: raw_info['feed']['entry']['content']['properties']['FullName'],
-          email: raw_info['feed']['entry']['content']['properties']['Email']
+          email: raw_info['feed']['entry']['content']['properties']['Email'],
+          division: raw_info['feed']['entry']['content']['properties']['CurrentDivision']['__content__']
         }
       end
 
