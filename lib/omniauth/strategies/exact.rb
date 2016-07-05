@@ -30,7 +30,18 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/api/v1/current/Me').parsed
+        return @raw_info if @raw_info
+        raw_info = access_token.get('/api/v1/current/Me').parsed
+        s2s =
+          lambda do |h|
+            Hash === h ?
+              Hash[
+                h.map do |k, v|
+                  [k.sub(/.*?:/, ''), s2s[v]]
+                end
+              ] : h
+          end
+        @raw_info = s2s[raw_info]
       end
     end
   end
