@@ -3,16 +3,16 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'omniauth-exact/version'
 
 Gem::Specification.new do |gem|
-  gem.add_dependency 'omniauth',   '~> 1.2.0'
-  gem.add_dependency 'omniauth-oauth2', '~> 1.2.0'
+  gem.add_dependency 'omniauth',   '~> 1.6.0'
+  gem.add_dependency 'omniauth-oauth2', '~> 1.4.0'
 
   gem.add_development_dependency 'bundler', '~> 1.0'
 
-  gem.authors       = ['Marek Podlesny']
-  gem.email         = ['zzk@chickenkiller.org']
-  gem.description   = 'OmniAuth strategy for Exact online'
+  gem.authors       = ['Michael Riviera']
+  gem.email         = ['info@storecove.nl']
+  gem.description   = 'OmniAuth 1.6 strategy for Exact online'
   gem.summary       = gem.description
-  gem.homepage      = 'https://github.com/zzk/omniauth-exact'
+  gem.homepage      = 'https://github.com/storecove/omniauth-exact'
   gem.licenses      = %w(MIT)
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").collect { |f| File.basename(f) }

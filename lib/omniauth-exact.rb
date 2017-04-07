@@ -1,2 +1,2 @@
-require 'omniauth-exact/version' # rubocop:disable FileName
+require 'omniauth-exact/version'
 require 'omniauth/strategies/exact'
