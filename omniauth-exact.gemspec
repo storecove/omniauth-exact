@@ -4,7 +4,7 @@ require 'omniauth-exact/version'
 
 Gem::Specification.new do |gem|
   gem.add_dependency 'omniauth',   '~> 1.6.0'
-  gem.add_dependency 'omniauth-oauth2', '~> 1.3.1'
+  gem.add_dependency 'omniauth-oauth2', '~> 1.4.0'
 
   gem.add_development_dependency 'bundler', '~> 1.0'
 
