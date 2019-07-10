@@ -1,5 +1,5 @@
 module OmniAuth
   module Exact
-    VERSION = '1.6'
+    VERSION = '1.9'
   end
 end
